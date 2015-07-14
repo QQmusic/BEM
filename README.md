@@ -3,9 +3,9 @@
 BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Modifier）**”，是一种新的前端命名方式。这种命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。
 
 `
-	.block{}  
-	.block__element{}  
-	.block--modifier{}
+> .block{}  
+> .block__element{}  
+> .block--modifier{}
 `
 - _   下划线 ：仅作为连字符使用，表示某个块或者某个子元素的多单词之间的连接记号。
 
