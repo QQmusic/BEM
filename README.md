@@ -12,12 +12,11 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 - -- 双中划线：双中划线用来描述一个块或者块的子元素的一种状态。
 - _  下划线 ：仅作为连字符使用，表示某个块或者某个子元素的多单词之间的连接记号。
 
-*注：每个团队可以不同的命名约定，可以使用不同的连接符号，只要符合BEM的原则即可。*
+注：每个团队可以不同的命名约定，可以使用不同的连接符号，只要符合BEM的原则即可。
 
 ## 了解BEM
 
-**Block**
-
+**Block**  
 在大多数情况下，任何独立的页面元素（或复杂或简单）都可以被视作一个块，一个header是block，header里嵌套的搜索框是block，甚至一个logo也可以是block。
 
 误区：这个block并非display:block;里的block。
@@ -31,11 +30,10 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 ```
 .mod_list{}
 ```
-
 **Element**  
 一个块的的子元素，并且子元素的子元素在BEM里也被认为是块的直接子元素。
 
-例如：.item是列表的一个子元素，.link是.item的一个子元素：
+如下面的例子，.item是列表的一个子元素，.link是.item的一个子元素。
 ```
 <!--before-->
 .mod_list{}
@@ -47,21 +45,34 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 .list__item{}
 .list__link{}
 ```
-*注：*
+注：
 
 **Modifier**  
+修饰符用于描述一个块或一个子元素的特定状态.
 
-修饰符用于描述一个块或一个子元素的特定状态，
+例如：一个表示按钮的块默认有三个大小：小，中，大。为了避免创建三个不同的块，最好是在块上加修饰符。这个修饰符应该有个名字（比如：size ）和值（ small，normal 或者 big ）。
+```
+.btn{}
+.btn--size_small{}
+.btn--size_normal{}
+.btn--size_big{}
+```
 
-例如：列表的的当前态.current。
+如下面的例子，表示一个选中的列表，和一个激活的列表项。
 ```
 <!--before-->
-.mod_list .item.current{}
-
-<!--now-->
-.list__item--current{}
+.mod_list{}
+.mod_list.select{}
+.mod_list .item{}
+.mod_list .item.active{}
+ 
+<!--now--> 
+.mod_list{}
+.list--select{}
+.list__item{}
+.list__item--active{}
 ```
-*注：*
+注：
 
 ## 完整范例
 ```
