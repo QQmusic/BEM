@@ -17,20 +17,36 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 ## 了解BEM
 
 **Block**
+
 在大多数情况下，任何独立的页面元素（或复杂或简单）都可以被视作一个块，一个header是block，header里嵌套的搜索框是block，甚至一个logo也可以是block。
+
 误区：这个block并非display:block;里的block。
-例如：一个自定义列表 list 是一个块，那么列表的block写法应该为:
+
+例如：一个自定义列表list是一个块，那么列表的block写法应该为:
 
 ```
 .list{}
 ```
-如果这个列表 list 是属于模块类别，在这种情况下，一个 list 列表模块的block写法应该为:
+如果这个列表list是属于模块类别，在这种情况下，一个list列表模块的block写法应该为:
 ```
 .mod_list{}
 ```
 
 **Element**  
-一个块的的子元素。
+一个块的的子元素，并且子元素的子元素在BEM里也被认为是块的直接子元素。
+例如：.item是列表的一个子元素，.link是.item的一个子元素：
+```
+<!--before-->
+.mod_list{}
+.mod_list .item{}
+.mod_list .item .link{}
+
+<!--now-->
+.mod_list{}
+.list__item{}
+.list__link{}
+```
+注：
 
 **Modifier**  
 修饰符用于描述一个块或一个子元素的特定状态，如：.current .active。
