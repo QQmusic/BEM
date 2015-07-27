@@ -2,7 +2,7 @@
 
 BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Modifier）**”，是一种新的前端命名方式。这种命名方法让你的CSS类对其他开发者来说更加透明而且更有意义。
 
-```
+``` css
 .block_name{}
 .block_name__element_name{}
 .block_name--modifier_name{}
@@ -23,18 +23,18 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 
 例如：一个自定义列表list是一个块，那么列表的block写法应该为:
 
-```
+``` css
 .list{}
 ```
 如果这个列表list是属于模块类别，在这种情况下，一个list列表模块的block写法应该为:
-```
+``` css
 .mod_list{}
 ```
 **Element**  
 一个块的的子元素，并且子元素的子元素在BEM里也被认为是块的直接子元素。
 
 如下面的例子，.item是列表的一个子元素，.link是.item的一个子元素。
-```
+``` css
 <!--before-->
 .mod_list{}
 .mod_list .item{}
@@ -51,7 +51,7 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 修饰符用于描述一个块或一个子元素的特定状态。
 
 例如：一个表示按钮的块默认有三个大小：小，中，大。为了避免创建三个不同的块，最好是在块上加修饰符。这个修饰符应该有个名字（比如：size ）和值（ small，normal 或者 big ）。
-```
+``` css
 .btn{}
 .btn--size_small{}
 .btn--size_normal{}
@@ -59,7 +59,7 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 ```
 
 另一个例子，表示一个选中的列表，和一个激活的列表项。
-```
+``` css
 <!--before-->
 .mod_list{}
 .mod_list.select{}
@@ -75,7 +75,7 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 注：mod_前缀只用于block命名上。
 
 ## 完整范例
-```
+``` css
 .mod_xxx{}
 .xxx__item{}
 .xxx__product_name{}
