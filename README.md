@@ -85,7 +85,7 @@ BEM的意思是指“**块（Block）**,**元素（Element）**,**修饰符（Mo
 .xxx__item--current .xxx__link{}
 ```
 **对应的HTML结构如下：**
-```
+``` html
 <ul class="mod_xxx">
     <li class="xxx__item">第一项
         <div class="xxx__product_name">我是名称</div>
